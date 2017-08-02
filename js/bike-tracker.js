@@ -13,5 +13,18 @@ BikeTracker.prototype.getBikes = function(location, getCount) {
     });
   };
 
+BikeTracker.prototype.getBikesByCity = function(city, getBikeStats) {
+  $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=10&location='+city+'&distance=10&stolenness=proximity&access_token='+apiKey).then(function(response) {
+
+    response.bikes.forEach(function(bike) {
+      getBikeStats(city, bike);
+      console.log(bike);
+    });
+
+  }).fail(function(error) {
+    $('.city-results').text(error.responseJSON.message);
+  });
+};
+
 
 exports.bikeModule = BikeTracker;

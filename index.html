@@ -12,10 +12,31 @@
     <h1>Bike Tracker</h1>
     <h4>Bikes Reported Stolen in Seattle: <span id="seattle-bikes"> </span></h4>
 
-    <form id="city-bikes">
-
+    <form id="city-form">
+      <label for="city">Enter a City: </label>
+      <input id="city" name="name" type="text">
+      <button type="submit">Get City Stats!</button>
     </form>
 
+    <div id="city-results">
+      <h4>Results for <span id="output-city"> </span></h4>
+
+      <div class="row">
+        <div class="col-md-3" id="bike-title">
+        </div>
+        <div class="col-md-3" id="manufacturer">
+        </div>
+        <div class="col-md-3" id="stolen-date">
+        </div>
+      </div>
+
+      <ul id="stolen-list">
+      </ul>
+      <!-- <ul id="stolen-by-manufacturer">
+      </ul>
+      <ul id="stolen-by-color">
+      </ul> -->
+    </div>
 
   </body>
 </html>
