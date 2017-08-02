@@ -6,24 +6,28 @@ var getCount = function(location, count) {
 
 var getBikeStats = function(city, listing) {
   // listings.forEach(function(element) {
-    $('#stolen-list').append('<li>'+listing.title+', Serial#: '+listing.serial+', Date Stolen: '+listing.date_stolen+ '</li>');
+    $('#bike-title').append('<li>'+listing.title+'</li>');
+    $('#serial').append('<li>'+listing.serial+'</li>');
+    $('#stolen-date').append('<li>'+convertDate(listing.date_stolen)+'</li>');
+
+    // , Serial#: '+listing.serial+', 'Date Stolen: '+convertDate(listing.date_stolen)+ '</li>');
   // });
 };
 
 var convertDate = function(time) {
   var year = 1970;
-  var month = 0;
-  var day = 0;
+  var month = 1;
+  var day = 1;
 
-  while (time % 31556926) {
+  while (time - 31556926 >= 0) {
     year++;
     time -= 31556926;
   }
-  while (time % 2629743) {
+  while (time - 2629743 >= 0) {
     month++;
     time -= 2629743;
   }
-  while (time % 86400) {
+  while (time - 86400 >= 0) {
     day++;
     time -= 86400;
   }
