@@ -9,37 +9,40 @@
     <title>Bike Tracker</title>
   </head>
   <body>
-    <h1>Bike Tracker</h1>
-    <h4>Bikes Reported Stolen in Seattle: <span id="seattle-bikes"> </span></h4>
+    <div class="">
 
-    <form id="city-form">
-      <label for="city">Enter a City: </label>
-      <input id="city" name="name" type="text">
-      <button type="submit">Get City Stats!</button>
-    </form>
 
-    <div id="city-results">
-      <h2>Results for <span id="output-city"> </span></h2>
+      <h1>Bike Tracker</h1>
+      <h4>Bikes Reported Stolen in Seattle: <span id="seattle-bikes"> </span></h4>
 
-      <div class="row">
-        <div class="col-md-3" id="bike-title">
-          <h4>Title</h4>
+      <form id="city-form">
+        <label for="city">Enter a City: </label>
+        <input id="city" name="name" type="text">
+        <button type="submit">Get City Stats!</button>
+      </form>
+
+      <div id="city-results">
+        <h2>Results for <span id="output-city"> </span></h2>
+
+        <div class="row">
+          <div class="col-md-3" id="bike-title">
+            <h4>Title</h4>
+          </div>
+          <div class="col-md-3" id="serial">
+            <h4>Serial Number</h4>
+          </div>
+          <div class="col-md-3" id="stolen-date">
+            <h4>Date Stolen</h4>
+          </div>
         </div>
-        <div class="col-md-3" id="serial">
-          <h4>Serial Number</h4>
-        </div>
-        <div class="col-md-3" id="stolen-date">
-          <h4>Date Stolen</h4>
-        </div>
+
+        <ul id="stolen-list">
+        </ul>
+        <!-- <ul id="stolen-by-manufacturer">
+        </ul>
+        <ul id="stolen-by-color">
+        </ul> -->
       </div>
-
-      <ul id="stolen-list">
-      </ul>
-      <!-- <ul id="stolen-by-manufacturer">
-      </ul>
-      <ul id="stolen-by-color">
-      </ul> -->
     </div>
-
   </body>
 </html>
